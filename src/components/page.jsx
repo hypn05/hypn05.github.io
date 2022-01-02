@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import NewLine from "./newLine";
 import Ls from "./ls";
 import Cat from "./cat";
+import WrongInput from "./wrongInput"
+import logo from "../assets/image.svg";
+
 export class Page extends Component {
 	state = {
 		numberOfLine: 0,
@@ -30,23 +33,23 @@ export class Page extends Component {
 		subDir: [
 			{
 				id: 14,
-				type: "About.txt"
+				type: "About"
 			},
 			{
 				id: 15,
-				type: "Education.txt"
+				type: "Education"
 			},
 			{
 				id: 16,
-				type: "Projects.txt"
+				type: "Experience"
 			},
 			{
 				id: 17,
-				type: "Socials.txt"
+				type: "Socials"
 			},
 			{
 				id: 18,
-				type: "Contact_Me.txt"
+				type: "Contact_Me"
 			}
 		]
 	};
@@ -55,11 +58,11 @@ export class Page extends Component {
 			<div className="container">
 				<div className="terminal">
 					<p className="prompt">
-						Hey there! This is a portfolio website for {this.information.name}.
-						For basic commands type cmd
+						Hey there! This is a portfolio website for {this.information.name}.<br></br>
+						For basic commands type: <text className="highlight">cmd</text>
 					</p>
 
-					{this.state.displayEverything.map(l => {
+					{this.state.displayEverything.map((l) => {
 						if (l.type === "line") {
 							return (
 								<NewLine
@@ -80,6 +83,7 @@ export class Page extends Component {
 						} else if (l.type === "cat") {
 							return <Cat key={l.id} line={l}></Cat>;
 						}
+						return <WrongInput key={l.id} line={l}></WrongInput>;;
 					})}
 				</div>
 			</div>
