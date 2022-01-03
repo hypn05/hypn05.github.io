@@ -52,6 +52,18 @@ export class Page extends Component {
 			}
 		]
 	};
+	componentDidMount() {
+		this.scrollToBottom();
+	  }
+	
+	  componentDidUpdate() {
+		this.scrollToBottom();
+	  }
+	
+	  scrollToBottom() {
+		this.el.scrollIntoView({ behavior: 'smooth' });
+	  }
+
 	render() {
 		return (
 			<div className="container">
@@ -85,6 +97,7 @@ export class Page extends Component {
 						return <WrongInput key={l.id} line={l}></WrongInput>;;
 					})}
 				</div>
+				<div ref={el => { this.el = el; }} />
 			</div>
 		);
 	}

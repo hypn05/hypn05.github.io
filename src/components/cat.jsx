@@ -136,30 +136,19 @@ export class Cat extends Component {
         ],
       },
     ],
-    projects: [
-      {
-        projectName: "p1",
-        liveDemo: "https://github.com/shloksomani",
-        linkToGithub: "https://github.com/shloksomani",
-      },
-      {
-        projectName: "p2",
-        liveDemo: "https://github.com/shloksomani",
-        linkToGithub: "https://github.com/shloksomani",
-      },
-    ],
     social: [
       {
         platform: "Github",
-        link: "https://github.com/shloksomani",
+        link: "",
       },
 
       {
         platform: "Github",
-        link: "https://github.com/shloksomani",
+        link: "",
       },
     ],
   };
+  
   render() {
     return (
       <React.Fragment>
@@ -238,32 +227,6 @@ export class Cat extends Component {
                       </div>
                     );
                   })}
-                </p>
-              );
-            })}
-          </React.Fragment>
-        );
-      } else if (lower === "projects" || lower === "project") {
-        return (
-          <React.Fragment>
-            {this.information.projects.map((everyProject) => {
-              return (
-                <p className="result">
-                  {everyProject.projectName}
-                  <a
-                    href={everyProject.liveDemo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Link
-                  </a>
-                  <a
-                    href={everyProject.linkToGithub}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={githubLogo} alt="GithubLink to Code" />
-                  </a>
                 </p>
               );
             })}
