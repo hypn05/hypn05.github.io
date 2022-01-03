@@ -66,7 +66,7 @@ export class Cat extends Component {
             description: [
               "Job functions include threat modeling, bug bounty triage, pentest coordination, vulnerability tracking, security reviews of internal and external products.",
               "Build out Application Security program (SAST, DAST, SCA, Developer Education, & Policies)",
-              "Setup and Mange container security tooling",
+              "Setup and Manage container security tooling",
               "Collaborate frequently with different engineering teams to identify and address security issues",
             ],
           },
