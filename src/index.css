@@ -4,6 +4,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: black;
+    font-weight: bold;
 }
 
 code {
@@ -72,6 +73,14 @@ code {
     text-shadow: 0 0 2px white;
 }
 
+.schoolInformation {
+    font-size: 12px;
+}
+
+.degreeInformation {
+    width: 700px;
+}
+
 .here {
     position: fixed;
     /* top: 0; */
@@ -102,8 +111,34 @@ code {
     width: -webkit-fill-available;
 }
 
+.logoContainer {
+    color: black;
+    background: white;
+    display: inline-block;
+    white-space: pre;
+    letter-spacing: 0;
+    line-height: 1.4;
+    font-family: 'Consolas', 'BitstreamVeraSansMono', 'CourierNew', Courier, monospace;
+    font-size: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+.logoDark {
+    color: #FFF;
+}
+
+.logoLight {
+    color: #000000;
+}
+
+.logoPink {
+    color: pink;
+}
+
 .terminal .prompt .highlight {
-    color: #f01f1f;
+    color: white;
 }
 
 .terminal .prompt:before {
@@ -132,7 +167,7 @@ code {
 .result {
     color: #1ff042;
     display: block;
-    width: 90vh;
+    /* width: 90vh; */
     font-family: "AndaleMono", monospace;
     /* font-weight: bold; */
     font-size: 0.9em;

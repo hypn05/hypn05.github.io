@@ -3,7 +3,6 @@ import NewLine from "./newLine";
 import Ls from "./ls";
 import Cat from "./cat";
 import WrongInput from "./wrongInput"
-import logo from "../assets/image.svg";
 
 export class Page extends Component {
 	state = {
@@ -58,8 +57,8 @@ export class Page extends Component {
 			<div className="container">
 				<div className="terminal">
 					<p className="prompt">
-						Hey there! This is a portfolio website for {this.information.name}.<br></br>
-						For basic commands type: <text className="highlight">cmd</text>
+					<text className="highlight">Hey there! This is a portfolio website for {this.information.name}.<br></br>
+						For basic commands type:</text> cmd
 					</p>
 
 					{this.state.displayEverything.map((l) => {

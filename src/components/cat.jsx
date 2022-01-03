@@ -53,6 +53,89 @@ export class Cat extends Component {
         ],
       },
     ],
+    experience: [
+      {
+        companyName: "Tesla",
+        city: "Austin, Texas, United States",
+        companyDetails: [
+          {
+            position: "Application Security Engineer",
+            startDate: "Jul 2021",
+            endDate: "Present",
+            term: "",
+            description: [
+              "Job functions include threat modeling, bug bounty triage, pentest coordination, vulnerability tracking, security reviews of internal and external products.",
+              " Build out Application Security program (SAST, DAST, SCA, Developer Education, & Policies)",
+              "Setup and Mange container security tooling",
+              "Collaborate frequently with different engineering teams to identify and address security issues",
+            ],
+          },
+        ],
+      },
+      {
+        companyName: "Synopsys Inc",
+        city: "Bloomington, Indiana, United States",
+        companyDetails: [
+          {
+            position: "Security Consultant",
+            startDate: "Jun 2020",
+            endDate: "Jul 2021",
+            term: "1 yr 2 mos",
+            description: [
+              "Translating client security requirements & conducting penetration testing and vulnerability assessments of web applications and web services.",
+              "Reporting detailed results of the analysis back to the client as deliverables.",
+              "Writing scripts to automate various steps in testing.",
+            ],
+          },
+        ],
+      },
+      {
+        companyName: "Okta, Inc.",
+        city: "San Francisco Bay Area, United States",
+        companyDetails: [
+          {
+            position: "Application Security Engineer Intern",
+            startDate: "Jun 2019",
+            endDate: "Aug 2019",
+            term: "3 mos",
+            description: [
+              "Automate scanning of Okta products on weekly basis using Burp.",
+              "Design review: Evaluate design against the specified requirements to identify issues before product release.",
+              "Code review: Consciously and systematically convening code for CVE’s.",
+              "Penetration testing: Identify and report security weaknesses in the features.",
+            ],
+          },
+        ],
+      },
+      {
+        companyName: "Techracers Inc",
+        city: "Indore, India",
+        companyDetails: [
+          {
+            position: "Blockchain developer",
+            startDate: "Aug 2017",
+            endDate: "Jun 2018",
+            term: "11 mos",
+            description: [
+              "Blockchain Proof of Concept: Solidifying feasibility and functionality of application in blockchain environment.",
+              "Test the business logics and securing all the application transaction on the blockchain.",
+              "Develop solidity smart contract, covering user test-cases writing in Mocha testing framework using truffle suite.",
+            ],
+          },
+          {
+            position: "Solutions Architect",
+            startDate: "Aug 2016",
+            endDate: "Jul 2017",
+            term: "1 yr",
+            description: [
+              "Application Diagnostics: Diagnose and fix bugs and performance bottlenecks for performance to provide a native experience.",
+              "Code review of the application to check for possible exploits.",
+              "Modules: Create React-Native modules including Video chat module, boilerplate, text-fields, buttons and more.",
+            ],
+          },
+        ],
+      },
+    ],
     projects: [
       {
         projectName: "p1",
@@ -98,16 +181,63 @@ export class Cat extends Component {
             {this.information.education.map((edu) => {
               return (
                 <p className="result">
-                  {edu.degree} | {edu.field}
-                  <br></br>
-                  {edu.school}
-                  <br />
+                  <table>
+                    <tr>
+                      <td className="degreeInformation">
+                        {edu.degree} | {edu.field}
+                      </td>
+                      <td>
+                        {edu.startDate} - {edu.endDate}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="schoolInformation">{edu.school}</td>
+                    </tr>
+                  </table>
                   Coursework: <br />
                   <ul>
                     {edu.coursework.map((i) => {
                       return <li className="coursework">{i}</li>;
                     })}
                   </ul>
+                </p>
+              );
+            })}
+          </React.Fragment>
+        );
+      } else if (lower === "experience") {
+        return (
+          <React.Fragment>
+            {this.information.experience.map((exp) => {
+              return (
+                <p className="result">
+                  <table>
+                    <tr>
+                      <td className="degreeInformation">{exp.companyName}</td>
+                    </tr>
+                    <tr>
+                      <td className="schoolInformation">{exp.city}</td>
+                    </tr>
+                  </table>
+                  {exp.companyDetails.map((cd) => {
+                    return (
+                      <div>
+                        <table>
+                          <tr>
+                            <td className="degreeInformation coursework">{cd.position}</td>
+                            <td className="coursework">
+                              {cd.startDate} - {cd.endDate} . {cd.term}
+                            </td>
+                          </tr>
+                        </table>
+                        <ul>
+                          {cd.description.map((l) => {
+                            return <li>{l}</li>;
+                          })}
+                        </ul>
+                      </div>
+                    );
+                  })}
                 </p>
               );
             })}
