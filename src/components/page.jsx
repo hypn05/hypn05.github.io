@@ -45,10 +45,6 @@ export class Page extends Component {
 			{
 				id: 17,
 				type: "Socials"
-			},
-			{
-				id: 18,
-				type: "Contact_Me"
 			}
 		]
 	};

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import githubLogo from "../assets/GitHub-Mark-Light-32px.png";
+import linkedinLogo from "../assets/linkedin.png";
+
 // import gif from "./eye-icon-animate.gif";
 
 export class Cat extends Component {
@@ -138,13 +140,15 @@ export class Cat extends Component {
     ],
     social: [
       {
-        platform: "Github",
-        link: "",
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/in/hypn05/",
+        img: linkedinLogo
       },
 
       {
         platform: "Github",
-        link: "",
+        link: "https://github.com/hypn05",
+        img: githubLogo
       },
     ],
   };
@@ -202,7 +206,7 @@ export class Cat extends Component {
                 <p className="result">
                   <table>
                     <tr>
-                      <td className="degreeInformation">{exp.companyName}</td>
+                      <td className="companyName">{exp.companyName}</td>
                     </tr>
                     <tr>
                       <td className="schoolInformation">{exp.city}</td>
@@ -227,6 +231,7 @@ export class Cat extends Component {
                       </div>
                     );
                   })}
+                  <p className="divider">--------------------------------</p>
                 </p>
               );
             })}
@@ -252,11 +257,11 @@ export class Cat extends Component {
                     {everySocial.platform}
                   </a>
                   <a
-                    href="https://github.com/shloksomani"
+                    href={everySocial.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={githubLogo} alt="GithubLink to Code" />
+                    <img src={everySocial.img} />
                   </a>
                 </p>
               );

@@ -15,6 +15,12 @@ code {
     color: white;
 }
 
+.container {
+    width: 60%;
+    margin: auto;
+    box-shadow: 3px 0 white, -.2em 0 0 white;
+}
+
 @-webkit-keyframes cursor-blink {
     0% {
         opacity: 0;
@@ -79,6 +85,19 @@ code {
 
 .degreeInformation {
     width: 700px;
+}
+
+.divider {
+    color: white;
+    text-shadow: 0 0 2px white;
+    text-align: center;
+}
+
+.companyName {
+    width: 700px;
+    color: white;
+    text-shadow: 0 0 2px white;
+    font-size: medium;
 }
 
 .here {
@@ -181,9 +200,6 @@ code {
 a {
     color: white;
     text-decoration: none;
-    -webkit-animation: cursor-blink 1.5s steps(1) infinite;
-    -moz-animation: cursor-blink 1.5s steps(1) infinite;
-    animation: cursor-blink 1.5s steps(1) infinite;
     display: inline-block;
     padding: 25px;
 }
