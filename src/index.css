@@ -3,12 +3,18 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: black;
+    background: #363636;
     font-weight: bold;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+img {
+    padding: 10px;
+    /* margin-top: 10px; */
+    vertical-align: middle;
 }
 
 #root {
@@ -19,6 +25,12 @@ code {
     width: 60%;
     margin: auto;
     box-shadow: 3px 0 white, -.2em 0 0 white;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
 }
 
 @-webkit-keyframes cursor-blink {
@@ -75,11 +87,13 @@ code {
 }
 
 .coursework {
-    color: white;
-    text-shadow: 0 0 2px white;
+    color: #b6b6b6;
+    text-shadow: 0 0 2px #b6b6b6;
 }
 
 .schoolInformation {
+    color: #ff1e8e;
+    text-shadow: 0 0 2px #ff1e8e;
     font-size: 12px;
 }
 
@@ -88,15 +102,15 @@ code {
 }
 
 .divider {
-    color: white;
-    text-shadow: 0 0 2px white;
+    color: #ff8e1e;
+    text-shadow: 0 0 2px #ff8e1e;
     text-align: center;
 }
 
 .companyName {
     width: 700px;
-    color: white;
-    text-shadow: 0 0 2px white;
+    color: #ff0883;
+    text-shadow: 0 0 2px #ff0883;
     font-size: medium;
 }
 
@@ -113,11 +127,14 @@ code {
 
 .terminal {
     position: relative;
+    background-color: #424242;
     padding: 4rem;
+    min-height: 90vh;
+    height: 100%;
 }
 
 .terminal .prompt {
-    color: #1ff042;
+    color: #83ff08;
     display: block;
     font-family: "AndaleMono", monospace;
     font-weight: bold;
@@ -208,8 +225,7 @@ a:hover {
     text-decoration: underline;
 }
 
-img {
-    padding: 10px;
-    /* margin-top: 10px; */
-    vertical-align: middle;
+.nameheader {
+    text-align: center;
+    color: #1eff8e;
 }

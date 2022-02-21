@@ -64,6 +64,7 @@ export class Page extends Component {
 		return (
 			<div className="container">
 				<div className="terminal">
+					<h1 className="nameheader">Hi, I’m Abbas!</h1>
 					<p className="prompt">
 					<text className="highlight">Hey there! This is a portfolio website for {this.information.name}.<br></br>
 						For basic commands type:</text> cmd

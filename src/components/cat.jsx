@@ -175,16 +175,16 @@ export class Cat extends Component {
               return (
                 <p className="result">
                   <table>
-                    <tr>
-                      <td className="degreeInformation">
-                        {edu.degree} | {edu.field}
-                      </td>
-                      <td>
-                        {edu.startDate} - {edu.endDate}
-                      </td>
+                  <tr>
+                      <td className="schoolInformation">{edu.school}</td>
                     </tr>
                     <tr>
-                      <td className="schoolInformation">{edu.school}</td>
+                      <td className="degreeInformation coursework">
+                        {edu.degree} | {edu.field}
+                      </td>
+                      <td className="degreeInformation coursework">
+                        {edu.startDate} - {edu.endDate}
+                      </td>
                     </tr>
                   </table>
                   Coursework: <br />
@@ -193,7 +193,10 @@ export class Cat extends Component {
                       return <li className="coursework">{i}</li>;
                     })}
                   </ul>
+                  <p className="divider">--------------------------------</p>
+
                 </p>
+                
               );
             })}
           </React.Fragment>
